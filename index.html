@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Score Keeper</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    >
+</head>
+
+<body>
+    <main class="container section">
+        <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-2by1">
+                        <img
+                            src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=1200&q=80"
+                            alt="Ping pong table"
+                        >
+                    </figure>
+                </div>
+
+                <header class="card-header">
+                    <p class="card-header-title">Ping Pong Score Keeper</p>
+                </header>
+
+                <div class="card-content">
+                    <div class="content has-text-centered">
+                        <h1 class="title is-1">
+                            <span id="p1Display">0</span>
+                            <span aria-hidden="true"> to </span>
+                            <span id="p2Display">0</span>
+                        </h1>
+
+                        <p class="subtitle">First player to reach the selected score wins.</p>
+
+                        <div class="field">
+                            <label for="playto" class="label">Playing to:</label>
+                            <div class="select is-rounded">
+                                <select id="playto" name="playto">
+                                    <option value="3">3</option>
+                                    <option value="5">5</option>
+                                    <option value="8">8</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="card-footer">
+                    <button id="p1but" class="button is-primary card-footer-item">
+                        +1 Player One
+                    </button>
+                    <button id="p2but" class="button is-info card-footer-item">
+                        +1 Player Two
+                    </button>
+                    <button id="reset" class="button is-danger card-footer-item">
+                        Reset
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .winner {
+            color: green;
+        }
+
+        .loser {
+            color: red;
+        }
+    </style>
+
+    <script src="pingpong.js"></script>
+</body>
+</html>
